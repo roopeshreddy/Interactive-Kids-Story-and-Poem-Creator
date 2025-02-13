@@ -91,7 +91,7 @@ class CreativeGenerator:
 def main():
     st.set_page_config(page_title="Story & Poem Generator", layout="wide")
     
-    st.title("🌟 Magical Story & Poem Generator 📚")
+    st.title(" Magical Story & Poem Generator ")
     st.write("Create your own personalized stories and poems with matching illustrations!")
     
     # API Key input
@@ -121,7 +121,7 @@ def main():
     specific_element = st.text_input("Add specific elements to include (optional):",
                                    placeholder="e.g., a red-haired girl, a flying unicorn")
     
-    if st.button(f"Generate {content_type} and Image! ✨"):
+    if st.button(f"Generate {content_type} and Image! "):
         if theme:
             with st.spinner(f"Creating your magical {content_type.lower()}..."):
                 # Generate content
@@ -142,7 +142,7 @@ def main():
                 with open(pdf_path, "rb") as f:
                     pdf_bytes = f.read()
                     st.download_button(
-                        label="Download as PDF 📥",
+                        label="Download as PDF ",
                         data=pdf_bytes,
                         file_name=f"your_magical_{content_type.lower()}.pdf",
                         mime="application/pdf"
